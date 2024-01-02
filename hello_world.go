@@ -1,50 +1,45 @@
 package main
+
 import (
 	"machine"
 	"time"
-	)
+)
 
+var led = machine.PC18
 
 func main() {
-	
-	led := machine.PC18
-	led.configure(machine.PinConfig{Mode: machine.PinOutput})
+
+	led.Configure(machine.PinConfig{Mode: machine.PinOutput})
 	for {
-		Led.Low()
-		time.Sleep(time.Millisecond * 1000)
+		led.Low()
+		time.Sleep(time.Millisecond * 2000)
 		hello()
 		newWord()
 		world()
- 		newWord()
 		newWord()
 		newWord()
+		newWord()
 
+	}
 
-
-	} 
-
-	println("hello world")
-	
 }
 
 func dot() {
-	Led.Low()
+	led.Low()
 	time.Sleep(time.Millisecond * 100)
-	Led.High()
+	led.High()
 	time.Sleep(time.Millisecond * 500)
 }
 func dash() {
-	Led.Low()
+	led.Low()
 	time.Sleep(time.Millisecond * 100)
-	Led.High()
+	led.High()
 	time.Sleep(time.Millisecond * 1000)
 }
 
 func space() {
-	Led.Low()
+	led.Low()
 	time.Sleep(time.Millisecond * 1000)
-
-
 
 }
 
@@ -70,11 +65,9 @@ func hello() {
 	dash()
 	dash()
 
-	}
-
-
 }
-func world(){
+
+func world() {
 
 	dot()
 	dash()
@@ -95,11 +88,9 @@ func world(){
 
 }
 
-func newWord() { 
-	
+func newWord() {
+
 	space()
 	space()
-
-
 
 }
