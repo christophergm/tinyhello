@@ -16,9 +16,7 @@ func main() {
 		hello()
 		newWord()
 		world()
-		newWord()
-		newWord()
-		newWord()
+		end()
 
 	}
 
@@ -42,7 +40,13 @@ func space() {
 	time.Sleep(time.Millisecond * 1000)
 
 }
+func end() { 
+	newword()
+	newword()
+	newword()
 
+
+}
 func hello() {
 	dot()
 	dot()
