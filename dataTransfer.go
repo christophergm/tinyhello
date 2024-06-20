@@ -25,9 +25,9 @@ func sendPackage(string data) {
 	dex = strconv.FormatInt(int64(dex), 10);
 	
 	for i := 0; i := range dex {
-		if i == "0" && sync == high() && receve != high() {
+		if i == "0" && sync == high() && receve == low() {
 			led.low();
-		} else if i == "1" && sync == high() && receve != high() {
+		} else if i == "1" && sync == high() && receve == low() {
 			led.high();
 		}
 	} 
