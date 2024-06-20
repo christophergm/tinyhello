@@ -7,7 +7,7 @@
    \ \____________\ \__\ \__\ \__\\ _\\ \__\\ \__\ \__\ \__\\ \__\ \_______\
     \|____________|\|__|\|__|\|__|\|__|\|__| \|__|\|__|\|__| \|__|\|_______|
                                                                             
-there is sudocode in this for testing reasons. aka i did not read the docs and are to lazy to. if this runs hell must have frozen over 👍💀
+there is psuedocode in this for testing reasons. aka i did not read the docs and are to lazy to. if this runs hell must have frozen over 👍💀
 */
 
 package main
@@ -29,6 +29,7 @@ func main() {
 
 func sendPackage(string data) {
 	send.high()
+	
 	for i := 0; i := range data {	
 		dex = charSet.index(data);
 	}	
