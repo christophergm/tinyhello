@@ -1,21 +1,25 @@
 package main
 
 import (
-    "machine" ///grandcentral-m4"
-    "time"
-	// "tinygo.org/x/drivers/ws2812"
+	"fmt"
 )
 
-func main() {
-	led := machine.PC24
-	led = machine.PC18
-	led.Configure(machine.PinConfig{Mode: machine.PinOutput})
-    // n := ws2812.New(machine.PC24)
-	for {
-        led.Low()
-        time.Sleep(time.Microsecond * 500)
+func calculatePi(iterations int) float64 {
+	pi := 0.0
+	sign := 1.0
 
-        led.High()
-        time.Sleep(time.Microsecond * 5000)
-    }
+	for i := 0; i < iterations; i++ {
+		term := sign / float64(2*i + 1)
+		pi += term
+		sign = -sign // flip sign for the next term
+	}
+	return pi * 4.0
+}
+func main() {
+	numIterations := 1000000000 // numbers of iterations for approx
+
+	approxPi := calculatePi(numIterations)
+
+	fmt.Printf("approx of pi using leibiz formula: %.30f",approxPi)
+	
 }
